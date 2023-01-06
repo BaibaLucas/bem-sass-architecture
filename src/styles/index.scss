@@ -1,0 +1,22 @@
+// Mixins
+@import "./mixin.scss";
+// Vars
+
+// Themes
+@import "./themes.scss";
+
+// Component
+@import "../components/App/app";
+@import "../components/Footer/footer";
+@import "../components/Header/header";
+@import "../components/Home/home";
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    min-height: 100Vh;
+    min-width: 100Vw;
+}

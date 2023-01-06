@@ -1,0 +1,22 @@
+/// Themes
+/// 
+$themes:(
+// Light
+"light":
+(
+backgroundColor: rgb(214, 188, 219)
+, mainColor: rgb(41, 40, 40)
+),
+// Dark
+"dark":
+(
+    backgroundColor: rgb(41, 40, 40)
+    , mainColor: rgb(214, 188, 219)
+),
+// Purple
+"blue":
+(
+    backgroundColor: rgb(137, 183, 242)
+    , mainColor: rgb(210, 80, 91)
+)
+);

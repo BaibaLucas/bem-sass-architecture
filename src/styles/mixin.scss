@@ -1,0 +1,27 @@
+// Sass Theming
+
+/// Function
+/// @param  {string} $key
+/// @example themes.scss dark = mainColor: blue
+/// @example component scss file 
+/// color: get-theme-value(mainColor)
+/// @return {css property} blue
+@function get-theme-value($key) {
+    @return map-get($exposed-theme-declarations, $key);
+};
+
+/// Mixin
+@mixin with-themes($themes) {
+    @each $theme, $theme-declarations in $themes {
+      @at-root #{&}--#{$theme} {
+        @each $property, $value in $theme-declarations {
+          $exposed-theme-declarations: map-merge(
+              $theme-declarations,
+               ($property: $value)
+            ) !global;
+        }
+  
+        @content;
+      }
+    }
+}
